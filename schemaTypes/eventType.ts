@@ -26,8 +26,8 @@ export const eventType = defineType({
             type: 'url',   
         }),
         defineField({
-            name: 'imageName',
-            type: 'string',   
+            name: 'image',
+            type: 'image',   
         })
   ],
 })
