@@ -1,4 +1,4 @@
-import {defineField, defineType} from 'sanity'
+import { defineField, defineType } from 'sanity'
 
 export const blogPost = defineType({
   name: 'blogPost',
@@ -9,40 +9,48 @@ export const blogPost = defineType({
       name: 'title',
       type: 'string',
     }),
-      defineField({
-        name: 'date',
-        type: 'datetime',
-      }),
-        defineField({
-            name: 'author',
-            type: 'string',
-        }),
-        defineField({
-            name: 'slug',
-            type: 'string',   
-        }),
-        defineField({
-          name: "tags",
-          type: "array",
-          title: "Tags for item",
-          of: [
-            {
-              type: 'string',              
-            }
-          ]
-        }),
-        defineField({
-          title: 'Content', 
-          name: 'content',
-          type: 'array',
-          of: [
-            {
-              type: 'block',
-            },
-            {
-              type: 'image',
-            },
-         ],
-        })
+    defineField({
+      name: 'date',
+      type: 'datetime',
+    }),
+    defineField({
+      name: 'author',
+      type: 'string',
+    }),
+    defineField({
+      name: 'slug',
+      type: 'string',
+    }),
+    defineField({
+      name: "tags",
+      type: "array",
+      title: "Tags for item",
+      of: [
+        {
+          type: 'string',
+        }
+      ]
+    }),
+    defineField({
+      name: 'image',
+      type: 'image',
+    }),
+    defineField({
+      name: 'summary',
+      type: 'string',
+    }),
+    defineField({
+      title: 'Content',
+      name: 'content',
+      type: 'array',
+      of: [
+        {
+          type: 'block',
+        },
+        {
+          type: 'image',
+        },
+      ],
+    })
   ],
 })
