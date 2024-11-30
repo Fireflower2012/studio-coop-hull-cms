@@ -8,18 +8,28 @@ export const blogPost = defineType({
     defineField({
       name: 'title',
       type: 'string',
+      validation: Rule => Rule.required()
     }),
     defineField({
       name: 'date',
-      type: 'datetime',
+      type: 'date',
+      validation: Rule => Rule.required()
     }),
     defineField({
       name: 'author',
       type: 'string',
+      validation: Rule => Rule.required()
     }),
     defineField({
       name: 'slug',
-      type: 'string',
+      type: 'slug',
+      options: {
+        source: 'title',
+        slugify: input => input
+        .toLowerCase()
+        .replace(/\s+/g, '-')
+        .slice(0, 200)
+      }
     }),
     defineField({
       name: "tags",
@@ -34,10 +44,15 @@ export const blogPost = defineType({
     defineField({
       name: 'image',
       type: 'image',
+      options: {
+        hotspot: true
+      },
+      validation: Rule => Rule.required()
     }),
     defineField({
       name: 'summary',
       type: 'string',
+      validation: Rule => Rule.required().max(500)
     }),
     defineField({
       title: 'Content',
@@ -49,6 +64,9 @@ export const blogPost = defineType({
         },
         {
           type: 'image',
+          options: {
+            hotspot: true
+          }
         },
       ],
     })
