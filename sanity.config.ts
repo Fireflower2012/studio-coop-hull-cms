@@ -13,7 +13,7 @@ export default defineConfig({
   projectId: 'gbawu8o6',
   dataset: 'production',
 
-  plugins: [structureTool(), visionTool(), media(), tags({}), googleMapsInput({apiKey:"AIzaSyBqYG6E0ceIaXNbxFsOq9osMyUth2oXp-k"})],
+  plugins: [structureTool(), visionTool(), media(), tags({}), googleMapsInput({apiKey:"real API key goes here"})],
 
   schema: {
     types: schemaTypes
