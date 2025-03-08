@@ -46,6 +46,11 @@ export const eventsV2 = defineType({
         name: 'duration',
         type: 'duration',
       }),
+      defineField({
+        title: 'Location Name',
+        name: 'locationName',
+        type: 'string',
+    }),
         defineField({
             title: 'Location',
             name: 'location',
