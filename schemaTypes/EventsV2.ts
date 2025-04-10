@@ -57,7 +57,12 @@ export const eventsV2 = defineType({
             type: 'geopoint',
         }),
         defineField({
-            title: 'Link',
+          title: 'Location Link (Copy from Google maps)',
+          name: 'locationLink',
+          type: 'url',
+      }),
+        defineField({
+            title: 'Link to external Info (ie Instagram, facebook)',
             name: 'eventLink',
             type: 'url',   
         }),
