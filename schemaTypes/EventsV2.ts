@@ -51,11 +51,11 @@ export const eventsV2 = defineType({
         name: 'locationName',
         type: 'string',
     }),
-        defineField({
-            title: 'Location',
-            name: 'location',
-            type: 'geopoint',
-        }),
+        // defineField({
+        //     title: 'Location',
+        //     name: 'location',
+        //     type: 'geopoint',
+        // }),
         defineField({
           title: 'Location Link (Copy from Google maps)',
           name: 'locationLink',
