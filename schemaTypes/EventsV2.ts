@@ -51,11 +51,6 @@ export const eventsV2 = defineType({
         name: 'locationName',
         type: 'string',
     }),
-        // defineField({
-        //     title: 'Location',
-        //     name: 'location',
-        //     type: 'geopoint',
-        // }),
         defineField({
           title: 'Location Link (Copy from Google maps)',
           name: 'locationLink',
@@ -66,6 +61,18 @@ export const eventsV2 = defineType({
             name: 'eventLink',
             type: 'url',   
         }),
-
+        defineField({
+          title: 'Include on Homepage',
+          name: 'includeOnHomepage',
+          type: 'string',
+          options: {
+            layout: "radio",
+            list: [
+              { title: "Yes", value: "yes" },
+              { title: "No", value: "no" },
+            ],
+          },
+          initialValue: "yes", 
+      })
   ],
 })
